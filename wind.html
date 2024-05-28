@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Tutorial - Wind particles</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="favicon.ico" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Navbar ======= -->
+   <div class="collapse navbar-collapse custom-navmenu" id="main-navbar">
+    <div class="container py-2 py-md-5">
+      <div class="row align-items-start">
+        <div class="col-md-2">
+          <ul class="custom-menu">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 d-none d-md-block  mr-auto">
+          <div class="tweet d-flex">
+            <a href="https://twitter.com/NooriGames" target="_blank"><span class="icofont-twitter text-white mt-2 mr-3"></span></a>
+            <div>
+              <p><em>I'm me on twitter! I post about the stuff I'm currently working on.</em></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-none d-md-block">
+		<div class="tweet d-flex">
+          <a href="https://ashaar.itch.io/" target="_blank"><span class="icofont-game text-white mt-2 mr-3"></span></a>
+           <div>
+              <p><em>Here's my itch.io profile, play some games and let me know what you think!</em></p>
+            </div>
+			</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <nav class="navbar navbar-light custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Anchit Sharma.</a>
+
+      <a href="#" class="burger" data-toggle="collapse" data-target="#main-navbar">
+        <span></span>
+      </a>
+
+    </div>
+  </nav>
+
+  <main id="main">
+<br>
+    <section class="section">
+      <div class="container">
+        <div class="row mb-4 align-items-center">
+          <div class="col-md-6" data-aos="fade-up">
+            <h2>Wind using the particle system</h2>
+            <p>Here is another tutorial using unity's particle system. We are making wind particles.</p>
+              <p>You can see this effect in my game Super Eyebrow princess.</p>
+              <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Experimenting with particles for wind.<a href="https://twitter.com/hashtag/indiedev?src=hash&amp;ref_src=twsrc%5Etfw">#indiedev</a> <a href="https://twitter.com/hashtag/indiegamedev?src=hash&amp;ref_src=twsrc%5Etfw">#indiegamedev</a> <a href="https://twitter.com/hashtag/gamedevelopment?src=hash&amp;ref_src=twsrc%5Etfw">#gamedevelopment</a> <a href="https://twitter.com/hashtag/gamedev?src=hash&amp;ref_src=twsrc%5Etfw">#gamedev</a> <a href="https://twitter.com/hashtag/pixelart?src=hash&amp;ref_src=twsrc%5Etfw">#pixelart</a> <a href="https://twitter.com/hashtag/madewithunity?src=hash&amp;ref_src=twsrc%5Etfw">#madewithunity</a> <a href="https://twitter.com/hashtag/%E3%83%89%E3%83%83%E3%83%88?src=hash&amp;ref_src=twsrc%5Etfw">#ドット</a> <a href="https://twitter.com/hashtag/%E3%82%B2%E3%83%BC%E3%83%A0%E5%88%B6%E4%BD%9C?src=hash&amp;ref_src=twsrc%5Etfw">#ゲーム制作</a> <a href="https://t.co/HKiSu9mb4p">pic.twitter.com/HKiSu9mb4p</a></p>&mdash; Ashar makes games (@AzCHIT) <a href="https://twitter.com/AzCHIT/status/1352240322818973698?ref_src=twsrc%5Etfw">January 21, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <br><br>
+            <p>I'll show you how to make two types of wind particles</p>
+            <p>Loop and Swirl</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="site-section pb-0">
+        <div class="container">
+          <div class="row align-items-stretch">
+            <div class="col-md-8" data-aos="fade-up">
+              <img src="assets/img/wind/types.gif" alt="Image" class="img-fluid">
+            </div>
+            <div class="col-md-3 ml-auto" data-aos="fade-up" data-aos-delay="100">
+              <div class="sticky-content">
+				
+              </div>
+            </div>
+          </div>
+        </div>
+		    <section class="section">
+      <div class="container">
+        <div class="row mb-4 align-items-center">
+          <div class="col-md-6" data-aos="fade-up">
+            <br>
+            <h4>Lets start the tutorial</h4>
+          <p>Open up a unity project and in your scene create a new particle system.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="site-section pb-0">
+        <div class="container">
+          <div class="row align-items-stretch">
+            <div class="col-md-8" data-aos="fade-up">
+              <img src="assets/img/wind/create.png" alt="Image" class="img-fluid">
+            </div>
+            <div class="col-md-3 ml-auto" data-aos="fade-up" data-aos-delay="100">
+              <div class="sticky-content">
+			
+              </div>
+            </div>
+          </div>
+        </div>
+				    <section class="section">
+      <div class="container">
+        <div class="row mb-4 align-items-center">
+          <div class="col-md-6" data-aos="fade-up">
+            <br>
+
+
+            <p>Decrease <b>start size to 0.1</b></p>
+            <p>Decrease <b>Max Particles to 1</b> </p>
+            <p>Change the <b>alpha to zero for the Start color</b>, this will make the particle itself transparent ( we need to see the wind trail and not the particle)
+            </p>
+
+
+
+
+          </div>
+        </div>
+      </div>
+	        <div class="site-section pb-0">
+        <div class="container">
+          <div class="row align-items-stretch">
+            <div class="col-md-8" data-aos="fade-up">
+              <img src="assets/img/wind/start.png" alt="Image" class="img-fluid">
+            </div>
+            <div class="col-md-3 ml-auto" data-aos="fade-up" data-aos-delay="100">
+              <div class="sticky-content">
+			
+              </div>
+            </div>
+          </div>
+        </div>
+						    <section class="section">
+      <div class="container">
+        <div class="row mb-4 align-items-center">
+          <div class="col-md-6" data-aos="fade-up">
+            <br>
+      <p>Under shape change the shape to a box
+      </p>
+
+          </div>
+        </div>
+      </div>
+	  	        <div class="site-section pb-0">
+        <div class="container">
+          <div class="row align-items-stretch">
+            <div class="col-md-8" data-aos="fade-up">
+              <img src="assets/img/wind/box.png" alt="Image" class="img-fluid">
+            </div>
+            <div class="col-md-3 ml-auto" data-aos="fade-up" data-aos-delay="100">
+              <div class="sticky-content">
+			
+              </div>
+            </div>
+          </div>
+        </div>
+								    <section class="section">
+      <div class="container">
+        <div class="row mb-4 align-items-center">
+          <div class="col-md-6" data-aos="fade-up">
+            <br>
+		  <h4></h4>
+		  <p>Check mark <b>velocity over lifetime</b>.
+        </p>
+      <p>Change <b>linear to curve</b>.</p>
+			
+          </div>
+        </div>
+      </div>
+	  	        <div class="site-section pb-0">
+        <div class="container">
+          <div class="row align-items-stretch">
+            <div class="col-md-8" data-aos="fade-up">
+              <img src="assets/img/wind/vel.JPG" alt="Image" class="img-fluid">
+            </div>
+            <div class="col-md-3 ml-auto" data-aos="fade-up" data-aos-delay="100">
+              <div class="sticky-content">
+			
+              </div>
+            </div>
+          </div>
+        </div>
+										    <section class="section">
+      <div class="container">
+        <div class="row mb-4 align-items-center">
+          <div class="col-md-6" data-aos="fade-up">
+            <br>
+		  <h4></h4>
+		  <p>Change the x and y curves as follows.</p>
+       <p>This will give it the loopy/ swirly motion. You can play around with these curves to give the particle any kind of motion.</p>			
+        <p>For the loop</p>
+        <p>For X</p>
+        </div>
+        </div>
+      </div>
+	  	        <div class="site-section pb-0">
+        <div class="container">
+          <div class="row align-items-stretch">
+            <div class="col-md-8" data-aos="fade-up">
+              <img src="assets/img/wind/loopx.JPG" alt="Image" class="img-fluid">
+            </div>
+          </div>
+        </div>
+        
+
+
+
+        <section class="section">
+          <div class="container">
+            <div class="row mb-4 align-items-center">
+              <div class="col-md-6" data-aos="fade-up">
+                <br>
+                <P>Y</P>			
+              </div>
+            </div>
+          </div>
+          <div class="site-section pb-0">
+            <div class="container">
+              <div class="row align-items-stretch">
+                <div class="col-md-8" data-aos="fade-up">
+                  <img src="assets/img/wind/loopy.JPG" alt="Image" class="img-fluid">
+                </div>
+                <div class="col-md-3 ml-auto" data-aos="fade-up" data-aos-delay="100">
+                  <div class="sticky-content">
+          
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <section class="section">
+              <div class="container">
+                <div class="row mb-4 align-items-center">
+                  <div class="col-md-6" data-aos="fade-up">
+                    <br>
+                  <p>For the swirl</p>   
+                <p>For X</p>               </div>
+                </div>
+              </div>
+              <div class="site-section pb-0">
+                <div class="container">
+                  <div class="row align-items-stretch">
+                    <div class="col-md-8" data-aos="fade-up">
+                      <img src="assets/img/wind/swirlx.JPG" alt="Image" class="img-fluid">
+                    </div>
+                    <div class="col-md-3 ml-auto" data-aos="fade-up" data-aos-delay="100">
+                      <div class="sticky-content">
+              
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <section class="section">
+                  <div class="container">
+                    <div class="row mb-4 align-items-center">
+                      <div class="col-md-6" data-aos="fade-up">
+                        <br>
+                        <P>Y</P>			
+                      </div>
+                    </div>
+                  </div>
+                  <div class="site-section pb-0">
+                    <div class="container">
+                      <div class="row align-items-stretch">
+                        <div class="col-md-8" data-aos="fade-up">
+                          <img src="assets/img/wind/swirly.JPG" alt="Image" class="img-fluid">
+                        </div>
+                        <div class="col-md-3 ml-auto" data-aos="fade-up" data-aos-delay="100">
+                          <div class="sticky-content">
+                  
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                        <section class="section">
+                          <div class="container">
+                            <div class="row mb-4 align-items-center">
+                              <div class="col-md-6" data-aos="fade-up">
+                                <br>
+                                <p>The Particles are now moving the way we want them to. But to see the wind we need to add a trail to these particles</p>
+                                <p>Check mark trail</p>
+                                <p>If the trail is pink, Give the trail default line material in under Renderer.</p>
+                                <p>Uncheck inherit particle color</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="site-section pb-0">
+                            <div class="container">
+                              <div class="row align-items-stretch">
+                                <div class="col-md-8" data-aos="fade-up">
+                                  <img src="assets/img/wind/trail.JPG" alt="Image" class="img-fluid">
+                                </div>
+                                <div class="col-md-3 ml-auto" data-aos="fade-up" data-aos-delay="100">
+                                  <div class="sticky-content">
+                          
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+        
+                            <section class="section">
+                              <div class="container">
+                                <div class="row mb-4 align-items-center">
+                                  <div class="col-md-6" data-aos="fade-up">
+                                    <br>
+                                    <p>Make color over lifetime a gradient and make it so that it ends with 0 alpha value at the end. This makes it so that when the trail disappears its a bit smoother.
+                                      </p>
+        
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="site-section pb-0">
+                                <div class="container">
+                                  <div class="row align-items-stretch">
+                                    <div class="col-md-8" data-aos="fade-up">
+                                      <img src="assets/img/wind/color.png" alt="Image" class="img-fluid">
+                                    </div>
+                                    <div class="col-md-3 ml-auto" data-aos="fade-up" data-aos-delay="100">
+                                      <div class="sticky-content">
+                              
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+    
+                                <section class="section">
+                                  <div class="container">
+                                    <div class="row mb-4 align-items-center">
+                                      <div class="col-md-6" data-aos="fade-up">
+                                        <br>
+                                        <p>Change width over trail to curve and make the curve like this. This makes the start and end of the trail thinner than the middle. </p>
+            
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="site-section pb-0">
+                                    <div class="container">
+                                      <div class="row align-items-stretch">
+                                        <div class="col-md-8" data-aos="fade-up">
+                                          <img src="assets/img/wind/width.JPG" alt="Image" class="img-fluid">
+                                        </div>
+                                        <div class="col-md-3 ml-auto" data-aos="fade-up" data-aos-delay="100">
+                                          <div class="sticky-content">
+                                  
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <section class="section">
+                                      <div class="container">
+                                        <div class="row mb-4 align-items-center">
+                                          <div class="col-md-6" data-aos="fade-up">
+                                            <br>
+                                            <p>This finally gives us our desired effect. You can now increse the number of Max particles and increase the box size to view tons of wind particles over a large area. </p>
+                                            <p>And thats pretty much it for the tutorial. Hope you learnt something new. Feel free to recreate this effect in your games!</p>
+
+                
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="site-section pb-0">
+                                        <div class="container">
+                                          <div class="row align-items-stretch">
+                                            <div class="col-md-8" data-aos="fade-up">
+                                            </div>
+                                            <div class="col-md-3 ml-auto" data-aos="fade-up" data-aos-delay="100">
+                                              <div class="sticky-content">
+                                      
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+
+    
+
+
+
+
+    
+
+												
+
+    </section>
+
+
+    <!-- ======= Testimonials Section ======= 
+    <section class="section pt-0">
+      <div class="container">
+
+        <div class="owl-carousel testimonial-carousel">
+
+          <div class="testimonial-wrap">
+            <div class="testimonial">
+              <img src="assets/img/person_1.jpg" alt="Image" class="img-fluid">
+              <blockquote>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis
+                  explicabo inventore.</p>
+              </blockquote>
+              <p>&mdash; Jean Hicks</p>
+            </div>
+          </div>
+
+          <div class="testimonial-wrap">
+            <div class="testimonial">
+              <img src="assets/img/person_2.jpg" alt="Image" class="img-fluid">
+              <blockquote>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis
+                  explicabo inventore.</p>
+              </blockquote>
+              <p>&mdash; Chris Stanworth</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>--><!-- End Testimonials Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <p class="mb-1"></p>
+        
+        </div>
+        <div class="col-sm-6 social text-md-right">
+          <a href="https://twitter.com/NooriGames" target="_blank"><span class="icofont-twitter"></span></a>
+          <a href="https://ashaar.itch.io/" target="_blank"><span class="icofont-game"></span></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
